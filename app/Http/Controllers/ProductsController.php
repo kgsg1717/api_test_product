@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Products_table;
+use App\Products_carts_table;
+use App\Carts_table;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -39,6 +41,22 @@ class ProductsController extends Controller
         } else {
             return response()->json(['error' => 'no autorizado'], 401,[]);
         }
+
+    }
+
+    function index_carrito(Request $request)
+    {
+        if ($request->isJson()) {
+            $products_carts = Products_carts_table::with('products_of_a_cart', 'status_cart')->get();
+
+
+
+            return response()->json($products_carts, 200);
+        } else {
+            return response()->json(['error' => 'no autorizado'], 401,[]);
+        }
+
+
 
     }
 

@@ -21,3 +21,5 @@ $router->get('/key', function(){
 
 $router->get('/productos','ProductsController@index');
 $router->post('/productos','ProductsController@createProduct');
+
+$router->get('/carrito_productos','ProductsController@index_carrito');
