@@ -21,5 +21,7 @@ $router->get('/key', function(){
 
 $router->get('/productos','ProductsController@index');
 $router->post('/productos','ProductsController@createProduct');
+$router->post('/productos/update','ProductsController@updateProduct');
 
-$router->get('/carrito_productos','ProductsController@index_carrito');
+$router->post('/carrito_productos','ProductsController@index_carrito');
+$router->post('/checkout','ProductsController@CheckOutForm');

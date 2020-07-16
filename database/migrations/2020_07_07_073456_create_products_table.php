@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string("name_product");
             $table->string("sku");
             $table->string("description");
-            $table->string("api_token", 60)->unique();
+            $table->decimal("price",13,4);
             $table->timestamps();
 
         });
