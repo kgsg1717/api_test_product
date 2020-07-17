@@ -41,3 +41,5 @@ El Backend esta en Laravel "LUMEN" y el [Front end](https://github.com/kgsg1717/
 >Ahora modifique ese archivo para conectarlo a la base de datos.
 > **-Crear base de datos** Esta parte es muy importante y diferente por persona, revise y cree su base de datos de su preferencia.
 >  **-Migrar** Ahora creara las migraciones el proyecto en su base de dato creada "php artisan migrate --seed"
+> **Iniciar ** 
+> En el proyecto inicia "php -S localhost:8000 -t public" abrira en el puerto [http://localhost:8000](http://localhost:8000)
